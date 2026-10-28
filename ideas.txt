@@ -1,0 +1,10 @@
+Future Features
+
+- Git version control
+- GitHub portfolio
+- Open WebUI integration
+- AI-powered Scout
+- Resume review
+- Interview practice
+- Career recommendations
+- AI memory system
