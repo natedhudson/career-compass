@@ -1,6 +1,6 @@
 print("Welcome to Career Compass!")
 print()
-print("Scout: What brings you here today?")
+print("What brings you here today?")
 print()
 
 print("1. Explore a new career")
