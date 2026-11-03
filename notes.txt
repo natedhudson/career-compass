@@ -8,3 +8,5 @@ Version 3
 - User input captured successfully
 
 fix where branches are routed
+
+Fixed validations and founds errors in sequences
