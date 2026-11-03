@@ -1,4 +1,3 @@
-
 print("Welcome to Career Compass!")
 print()
 print("What brings you here today?")
@@ -12,7 +11,11 @@ print("6. Further my education")
 print("7. I'm not sure")
 print()
 
-choice = input("> ")
+choice = input("> ").strip()
+
+while choice not in ["1", "2", "3", "4", "5", "6", "7"]:
+    print("Please enter a valid option (1-7).")
+    choice = input("> ").strip()
 
 print()
 
@@ -25,7 +28,11 @@ if choice == "1":
     print("5. A new challenge")
     print("6. Burnout in my current field")
 
-    answer = input("> ")
+    answer = input("> ").strip()
+
+    while answer not in ["1", "2", "3", "4", "5", "6"]:
+        print("Please enter a valid option (1-6).")
+        answer = input("> ").strip()
 
     print()
     print("Thank you for sharing.")
@@ -34,7 +41,7 @@ if choice == "1":
     if answer == "1":
         print("Higher income is a common reason people explore new careers.")
         print("Let's look at careers with strong earning potential.")
-    
+
     elif answer == "2":
         print("Work-life balance can have a huge impact on quality of life.")
         print("Let's explore careers known for flexibility.")
@@ -64,7 +71,11 @@ elif choice == "2":
     print("5. Changing departments")
     print("6. I'm not sure")
 
-    answer = input("> ")
+    answer = input("> ").strip()
+
+    while answer not in ["1", "2", "3", "4", "5", "6"]:
+        print("Please enter a valid option (1-6).")
+        answer = input("> ").strip()
 
     print()
     print("Thank you for sharing.")
@@ -90,3 +101,66 @@ elif choice == "2":
 
 else:
     print("This section is still under construction.")
+
+print()
+print("How much additional education are you willing to pursue?")
+print()
+print("1. None")
+print("2. Certification")
+print("3. Associate Degree")
+print("4. Bachelor's Degree")
+print("5. Master's Degree")
+
+education = input("> ").strip()
+
+while education not in ["1", "2", "3", "4", "5"]:
+    print("Please enter a valid option (1-5).")
+    education = input("> ").strip()
+
+print()
+print("Which type of work sounds most appealing to you?")
+print()
+print("1. Solving problems")
+print("2. Helping people")
+print("3. Leading and organizing")
+print("4. Building or repairing things")
+print("5. Analyzing information")
+print("6. Creating or designing")
+print("7. I'm not sure")
+
+work_type = input("> ").strip()
+
+while work_type not in ["1", "2", "3", "4", "5", "6", "7"]:
+    print("Please enter a valid option (1-7).")
+    work_type = input("> ").strip()
+
+print()
+print("Imagine it's Monday morning and you're actually looking forward to work.")
+print()
+print("Which of these sounds most like the reason?")
+print()
+print("Select all that apply.")
+print("Separate multiple answers with commas.")
+print()
+print("1. There's a challenge waiting for me")
+print("2. I get to help people")
+print("3. I get to work with good people")
+print("4. I'll learn something new")
+print("5. I'll build or create something real")
+print("6. Every day is a little different")
+print("7. I'm not sure")
+
+reason = input("> ").strip()
+
+valid_reasons = ["1", "2", "3", "4", "5", "6", "7"]
+
+reason_list = [item.strip() for item in reason.split(",")]
+
+while not all(item in valid_reasons for item in reason_list):
+    print("Select all that apply, separated by commas.")
+    print("Example: 1,4,5")
+    reason = input("> ").strip()
+    reason_list = [item.strip() for item in reason.split(",")]
+
+print()
+print("Thanks. I'm starting to get a better sense of what you're looking for.")
