@@ -1,8 +1,8 @@
+
 print("Welcome to Career Compass!")
 print()
 print("What brings you here today?")
 print()
-
 print("1. Explore a new career")
 print("2. Advance my career")
 print("3. Find a job")
@@ -24,7 +24,36 @@ if choice == "1":
     print("4. Greater job security")
     print("5. A new challenge")
     print("6. Burnout in my current field")
+
     answer = input("> ")
+
+    print()
+    print("Thank you for sharing.")
+    print()
+
+    if answer == "1":
+        print("Higher income is a common reason people explore new careers.")
+        print("Let's look at careers with strong earning potential.")
+    
+    elif answer == "2":
+        print("Work-life balance can have a huge impact on quality of life.")
+        print("Let's explore careers known for flexibility.")
+
+    elif answer == "3":
+        print("Many people want work that feels purposeful and rewarding.")
+        print("Let's explore careers that align with your values.")
+
+    elif answer == "4":
+        print("Job security is important in an uncertain economy.")
+        print("Let's look at stable and growing industries.")
+
+    elif answer == "5":
+        print("A new challenge can be an exciting opportunity for growth.")
+        print("Let's explore careers that offer variety and advancement.")
+
+    elif answer == "6":
+        print("Burnout is a sign that something may need to change.")
+        print("Let's explore careers that may be a better long-term fit.")
 
 elif choice == "2":
     print("What would advancing your career look like for you?")
@@ -34,57 +63,30 @@ elif choice == "2":
     print("4. Learning new skills")
     print("5. Changing departments")
     print("6. I'm not sure")
+
     answer = input("> ")
 
-elif choice == "3":
-    print("What best describes your current situation?")
-    print("1. Recently unemployed")
-    print("2. Looking for my first job")
-    print("3. Employed but looking elsewhere")
-    print("4. Returning to the workforce")
-    print("5. Contract ending soon")
-    answer = input("> ")
+    print()
+    print("Thank you for sharing.")
+    print()
 
-elif choice == "4":
-    print("What is your primary goal for your resume?")
-    print("1. Get more interviews")
-    print("2. Change careers")
-    print("3. Apply for promotions")
-    print("4. Enter a new field")
-    print("5. Create my first professional resume")
-    answer = input("> ")
+    if answer == "1":
+        print("Increasing your income often begins with developing valuable skills.")
 
-elif choice == "5":
-    print("What stage are you currently in?")
-    print("1. I haven't applied yet")
-    print("2. I have applications submitted")
-    print("3. I have an upcoming interview")
-    print("4. I've interviewed before but struggle with them")
-    answer = input("> ")
+    elif answer == "2":
+        print("Promotions usually come from demonstrating impact and leadership.")
 
-elif choice == "6":
-    print("What are you hoping education will help you accomplish?")
-    print("1. Qualify for a new career")
-    print("2. Advance my current career")
-    print("3. Increase my income")
-    print("4. Gain specialized skills")
-    print("5. Complete a degree")
-    print("6. Explore my interests")
-    answer = input("> ")
+    elif answer == "3":
+        print("Leadership roles often require both technical and people skills.")
 
-elif choice == "7":
-    print("Which statement sounds most like you?")
-    print("1. I feel stuck")
-    print("2. I need better income")
-    print("3. I don't know what careers fit me")
-    print("4. I'm unhappy in my current job")
-    print("5. I want direction")
-    print("6. I'm exploring possibilities")
-    answer = input("> ")
+    elif answer == "4":
+        print("Learning new skills can create opportunities for advancement.")
+
+    elif answer == "5":
+        print("Changing departments can help you find work that suits your strengths.")
+
+    elif answer == "6":
+        print("That's okay. Let's continue exploring your options.")
 
 else:
-    print("Sorry, I didn't understand that choice.")
-    answer = None
-
-print()
-print("Thank you for sharing.")
+    print("This section is still under construction.")
