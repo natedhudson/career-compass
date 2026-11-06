@@ -82,7 +82,49 @@ elif choice == "2":
     print()
     print("Thank you for sharing.")
     print()
+elif choice == "3":
+    print("What part of the job search is most challenging right now?")
+    print()
+    print("1. Finding positions to apply for")
+    print("2. Getting interviews")
+    print("3. Not having enough experience")
+    print("4. Knowing what jobs fit me")
+    print("5. Staying motivated")
+    print("6. I'm not sure")
 
+    answer = input("> ").strip()
+
+    while answer not in ["1", "2", "3", "4", "5", "6"]:
+        print("Please enter a valid option (1-6).")
+        answer = input("> ").strip()
+
+    print()
+    print("Thank you for sharing.")
+    print()
+
+    if answer == "1":
+        print("Finding opportunities is often the first hurdle.")
+        print("Let's identify industries and roles that match your interests.")
+
+    elif answer == "2":
+        print("Getting interviews often comes down to resume quality and targeting.")
+        print("Let's explore ways to increase your response rate.")
+
+    elif answer == "3":
+        print("Many employers value skills and potential as much as experience.")
+        print("Let's look at ways to build credibility and confidence.")
+
+    elif answer == "4":
+        print("That's exactly what Career Compass is designed to help with.")
+        print("Let's continue exploring your strengths and interests.")
+
+    elif answer == "5":
+        print("Job searching can be exhausting.")
+        print("Let's break the process into manageable steps.")
+
+    elif answer == "6":
+        print("That's okay.")
+        print("We'll keep exploring until a clearer direction emerges.")
     if answer == "1":
         print("Increasing your income often begins with developing valuable skills.")
 

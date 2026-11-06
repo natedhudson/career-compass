@@ -101,6 +101,50 @@ elif choice == "2":
     elif answer == "6":
         print("That's okay. Let's continue exploring your options.")
 
+elif choice == "3":
+    print("What part of the job search is most challenging right now?")
+    print()
+    print("1. Finding positions to apply for")
+    print("2. Getting interviews")
+    print("3. Not having enough experience")
+    print("4. Knowing what jobs fit me")
+    print("5. Staying motivated")
+    print("6. I'm not sure")
+
+    answer = input("> ").strip()
+
+    while answer not in ["1", "2", "3", "4", "5", "6"]:
+        print("Please enter a valid option (1-6).")
+        answer = input("> ").strip()
+
+    print()
+    print("Thank you for sharing.")
+    print()
+
+    if answer == "1":
+        print("Finding opportunities is often the first hurdle.")
+        print("Let's identify industries and roles that match your interests.")
+
+    elif answer == "2":
+        print("Getting interviews often comes down to resume quality and targeting.")
+        print("Let's explore ways to increase your response rate.")
+
+    elif answer == "3":
+        print("Many employers value skills and potential as much as experience.")
+        print("Let's look at ways to build credibility and confidence.")
+
+    elif answer == "4":
+        print("That's exactly what Career Compass is designed to help with.")
+        print("Let's continue exploring your strengths and interests.")
+
+    elif answer == "5":
+        print("Job searching can be exhausting.")
+        print("Let's break the process into manageable steps.")
+
+    elif answer == "6":
+        print("That's okay.")
+        print("We'll keep exploring until a clearer direction emerges.")
+    
 else:
     print("This section is still under construction.")
 
@@ -158,6 +202,14 @@ valid_reasons = ["1", "2", "3", "4", "5", "6", "7"]
 
 reason_list = [item.strip() for item in reason.split(",")]
 
+while not all(item in valid_reasons for item in reason_list):
+    print("Select all that apply, separated by commas.")
+    print("Example: 1,4,5")
+    reason = input("> ").strip()
+    reason_list = [item.strip() for item in reason.split(",")]
+
+duplicates = []
+
 duplicate_messages = [
     "Looks like you selected option {} more than once. I'll assume you're extra enthusiastic about that one.",
     "I noticed you picked option {} twice. I'm not counting it twice, but I admire the commitment.",
@@ -165,8 +217,6 @@ duplicate_messages = [
     "I'll only count option {} once, but I appreciate the passion.",
     "Career Compass noticed option {} showed up more than once. Good choice."
 ]
-
-duplicates = []
 
 for item in reason_list:
     if reason_list.count(item) > 1 and item not in duplicates:
@@ -177,13 +227,6 @@ for duplicate in duplicates:
     print(random.choice(duplicate_messages).format(duplicate))
 
 reason_list = list(dict.fromkeys(reason_list))
-
-
-while not all(item in valid_reasons for item in reason_list):
-    print("Select all that apply, separated by commas.")
-    print("Example: 1,4,5")
-    reason = input("> ").strip()
-    reason_list = [item.strip() for item in reason.split(",")]
 
 print()
 print("Thanks. I'm starting to get a better sense of what you're looking for.")
