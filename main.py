@@ -1,3 +1,5 @@
+import random
+
 print("Welcome to Career Compass!")
 print()
 print("What brings you here today?")
@@ -155,6 +157,27 @@ reason = input("> ").strip()
 valid_reasons = ["1", "2", "3", "4", "5", "6", "7"]
 
 reason_list = [item.strip() for item in reason.split(",")]
+
+duplicate_messages = [
+    "Looks like you selected option {} more than once. I'll assume you're extra enthusiastic about that one.",
+    "I noticed you picked option {} twice. I'm not counting it twice, but I admire the commitment.",
+    "Option {} seems to have made quite an impression.",
+    "I'll only count option {} once, but I appreciate the passion.",
+    "Career Compass noticed option {} showed up more than once. Good choice."
+]
+
+duplicates = []
+
+for item in reason_list:
+    if reason_list.count(item) > 1 and item not in duplicates:
+        duplicates.append(item)
+
+for duplicate in duplicates:
+    print()
+    print(random.choice(duplicate_messages).format(duplicate))
+
+reason_list = list(dict.fromkeys(reason_list))
+
 
 while not all(item in valid_reasons for item in reason_list):
     print("Select all that apply, separated by commas.")

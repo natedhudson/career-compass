@@ -1,3 +1,5 @@
+import random
+
 print("Welcome to Career Compass!")
 print()
 print("What brings you here today?")
@@ -62,7 +64,47 @@ if choice == "1":
         print("Burnout is a sign that something may need to change.")
         print("Let's explore careers that may be a better long-term fit.")
 
-        print()
+elif choice == "2":
+    print("What would advancing your career look like for you?")
+    print("1. Earning more money")
+    print("2. Getting promoted")
+    print("3. Moving into leadership")
+    print("4. Learning new skills")
+    print("5. Changing departments")
+    print("6. I'm not sure")
+
+    answer = input("> ").strip()
+
+    while answer not in ["1", "2", "3", "4", "5", "6"]:
+        print("Please enter a valid option (1-6).")
+        answer = input("> ").strip()
+
+    print()
+    print("Thank you for sharing.")
+    print()
+
+    if answer == "1":
+        print("Increasing your income often begins with developing valuable skills.")
+
+    elif answer == "2":
+        print("Promotions usually come from demonstrating impact and leadership.")
+
+    elif answer == "3":
+        print("Leadership roles often require both technical and people skills.")
+
+    elif answer == "4":
+        print("Learning new skills can create opportunities for advancement.")
+
+    elif answer == "5":
+        print("Changing departments can help you find work that suits your strengths.")
+
+    elif answer == "6":
+        print("That's okay. Let's continue exploring your options.")
+
+else:
+    print("This section is still under construction.")
+
+print()
 print("How much additional education are you willing to pursue?")
 print()
 print("1. None")
@@ -116,52 +158,32 @@ valid_reasons = ["1", "2", "3", "4", "5", "6", "7"]
 
 reason_list = [item.strip() for item in reason.split(",")]
 
+duplicate_messages = [
+    "Looks like you selected option {} more than once. I'll assume you're extra enthusiastic about that one.",
+    "I noticed you picked option {} twice. I'm not counting it twice, but I admire the commitment.",
+    "Option {} seems to have made quite an impression.",
+    "I'll only count option {} once, but I appreciate the passion.",
+    "Career Compass noticed option {} showed up more than once. Good choice."
+]
+
+duplicates = []
+
+for item in reason_list:
+    if reason_list.count(item) > 1 and item not in duplicates:
+        duplicates.append(item)
+
+for duplicate in duplicates:
+    print()
+    print(random.choice(duplicate_messages).format(duplicate))
+
+reason_list = list(dict.fromkeys(reason_list))
+
+
 while not all(item in valid_reasons for item in reason_list):
     print("Select all that apply, separated by commas.")
     print("Example: 1,4,5")
     reason = input("> ").strip()
     reason_list = [item.strip() for item in reason.split(",")]
 
-    print()
-    print("Thanks. I'm starting to get a better sense of what you're looking for.")
-
-    elif choice == "2":        
-    print("What would advancing your career look like for you?")
-    print("1. Earning more money")
-    print("2. Getting promoted")
-    print("3. Moving into leadership")
-    print("4. Learning new skills")
-    print("5. Changing departments")
-    print("6. I'm not sure")
-
-    answer = input("> ").strip()
-
-    while answer not in ["1", "2", "3", "4", "5", "6"]:
-        print("Please enter a valid option (1-6).")
-        answer = input("> ").strip()
-
-    print()
-    print("Thank you for sharing.")
-    print()
-
-    if answer == "1":
-        print("Increasing your income often begins with developing valuable skills.")
-
-    elif answer == "2":
-        print("Promotions usually come from demonstrating impact and leadership.")
-
-    elif answer == "3":
-        print("Leadership roles often require both technical and people skills.")
-
-    elif answer == "4":
-        print("Learning new skills can create opportunities for advancement.")
-
-    elif answer == "5":
-        print("Changing departments can help you find work that suits your strengths.")
-
-    elif answer == "6":
-        print("That's okay. Let's continue exploring your options.")
-
-    else:
-        print("This section is still under construction.")
-
+print()
+print("Thanks. I'm starting to get a better sense of what you're looking for.")
