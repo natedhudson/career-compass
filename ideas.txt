@@ -8,3 +8,20 @@ Future Features
 - Interview practice
 - Career recommendations
 - AI memory system
+
+
+duplicates = [] 
+for item in reason_list:
+if reason_list.count(item) > 1:
+duplicates.append(item)
+ 
+Then later:
+
+Python
+if "2" in duplicates:
+helping_people_score += 1
+
+or
+
+Python
+print("Helping others seems especially important to you.")
