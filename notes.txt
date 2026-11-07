@@ -10,3 +10,12 @@ Version 3
 fix where branches are routed
 
 Fixed validations and founds errors in sequences
+
+
+print("1. Explore a new career")
+print("2. Advance my career")
+print("3. Find a job")
+print("4. Improve my resume")
+print("5. Prepare for interviews")
+print("6. Further my education")
+print("7. I'm not sure")

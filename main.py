@@ -1,12 +1,12 @@
 import random
 
-print("Welcome to Career Compass!")
+print("Welcome to Career Compass! Your next adventure starts here.")
 print()
-print("What brings you here today?")
+print("Pick an area for us to look at together. You can always come back and explore other areas later.")
 print()
-print("1. Explore a new career")
-print("2. Advance my career")
-print("3. Find a job")
+print("1. See what careers might be a good fit for me")
+print("2. Take my career to the next level")
+print("3. Trying to find a job")
 print("4. Improve my resume")
 print("5. Prepare for interviews")
 print("6. Further my education")
@@ -22,6 +22,8 @@ while choice not in ["1", "2", "3", "4", "5", "6", "7"]:
 print()
 
 if choice == "1":
+    print("Now we're talking! Let's explore what careers might be a good fit for you.")
+
     print("What is motivating you to explore a new career?")
     print("1. Better income")
     print("2. Better work-life balance")
@@ -37,12 +39,15 @@ if choice == "1":
         answer = input("> ").strip()
 
     print()
-    print("Thank you for sharing.")
+
+
     print()
 
     if answer == "1":
         print("Higher income is a common reason people explore new careers.")
         print("Let's look at careers with strong earning potential.")
+        print("We'll also explore ways to increase your earning potential in your current field.")
+        print("Are you looking to further your education to increase your earning potential?")
 
     elif answer == "2":
         print("Work-life balance can have a huge impact on quality of life.")
@@ -145,6 +150,46 @@ elif choice == "3":
         print("That's okay.")
         print("We'll keep exploring until a clearer direction emerges.")
     
+elif choice == "4":
+    print("What is your biggest concern about your resume?")
+    print()
+    print("1. I don't have enough experience")
+    print("2. I don't know if it's written well")
+    print("3. I'm not getting interviews")
+    print("4. I'm changing careers")
+    print("5. I have gaps in my work history")
+    print("6. I'm not sure")
+
+    answer = input("> ").strip()
+
+while answer not in ["1", "2", "3", "4", "5", "6"]:
+    print("Please enter a valid option (1-6).")
+    answer = input("> ").strip()
+
+if answer == "1":
+    print("Many people underestimate how much value their existing experience provides.")
+    print("Let's identify skills and accomplishments you may be overlooking.")
+
+elif answer == "2":
+    print("A strong resume is more than a list of jobs.")
+    print("Let's look at how your experience is being presented.")
+
+elif answer == "3":
+    print("If applications aren't leading to interviews, there may be opportunities to improve targeting and presentation.")
+    print("Let's explore that further.")
+
+elif answer == "4":
+    print("Career transitions can be challenging.")
+    print("Let's identify transferable skills that can help tell your story.")
+
+elif answer == "5":
+    print("Employment gaps are more common than many people realize.")
+    print("Let's focus on presenting your experience with confidence.")
+
+elif answer == "6":
+    print("That's okay.")
+    print("We'll work together to identify possible areas for improvement.")
+
 else:
     print("This section is still under construction.")
 
