@@ -151,7 +151,7 @@ elif choice == "3":
         print("We'll keep exploring until a clearer direction emerges.")
     
 elif choice == "4":
-    print("What is your biggest concern about your resume?")
+    print("When it comes to your resume, what's the biggest challenge you're facing?")
     print()
     print("1. I don't have enough experience")
     print("2. I don't know if it's written well")
@@ -188,9 +188,97 @@ elif answer == "5":
 
 elif answer == "6":
     print("That's okay.")
-    print("We'll work together to identify possible areas for improvement.")
+    print("We'll work together to identify what may be holding your resume back.")
 
-else:
+elif choice == "5":
+    print("What concerns you most about interviewing?")
+    print()
+    print("1. I get nervous during interviews")
+    print("2. I don't know how to answer difficult questions")
+    print("3. I struggle talking about myself")
+    print("4. I'm not sure how to talk about my experience")
+    print("5. I don't know what employers are looking for")
+    print("6. I'm not sure")
+
+    answer = input("> ").strip()
+
+while answer not in ["1", "2", "3", "4", "5", "6"]:
+    print("Please enter a valid option (1-6).")
+    answer = input("> ").strip()
+
+if answer == "1":
+    print("Interview nerves are more common than you might think.")
+    print("Let's explore ways to help you feel more prepared and confident.")
+
+elif answer == "2":
+    print("Difficult questions can feel intimidating.")
+    print("Let's look at strategies that can help you answer with confidence.")
+
+elif answer == "3":
+    print("Many people find it uncomfortable to talk about themselves.")
+    print("Let's identify strengths and accomplishments that are worth highlighting.")
+
+elif answer == "4":
+    print("You likely have more relevant experience than you realize.")
+    print("Let's explore ways to communicate your skills and accomplishments clearly.")
+
+elif answer == "5":
+    print("Understanding what employers value can make interviews feel much less overwhelming.")
+    print("Let's take a closer look at what hiring managers are often looking for.")
+
+elif answer == "6":
+    print("That's okay.")
+    print("We'll work together to identify areas where you can build confidence.")
+
+elif choice == "6":
+    print("What type of education are you interested in pursuing?")
+    print()
+    print("1. Short-term courses or certifications")
+    print("2. Trade or technical school")
+    print("3. College degree (Associate, Bachelor's, or higher)")
+    print("4. professional development or continuing education")
+    print("5. I'm exploring my options")
+    print("6. I'm not sure")
+
+    education_choice = input("> ").strip()
+
+if education_choice == "1":
+    print("Short-term training can be a great way to develop valuable skills quickly.")
+    print("Let's explore options that can help you reach your goals without a long-term commitment.")
+
+elif education_choice == "2":
+    print("Trade and technical careers often provide hands-on learning and strong job opportunities.")
+    print("Let's explore paths that match your interests and strengths.")
+
+elif education_choice == "3":
+    print("A college degree can open doors to many career opportunities.")
+    print("Let's explore educational paths that align with your long-term goals.")
+
+elif education_choice == "4":
+    print("Continuing education can help you stay competitive and grow professionally.")
+    print("Let's explore areas where you may want to develop new skills.")
+
+elif education_choice == "5":
+    print("That's perfectly okay.")
+    print("Many people begin by exploring different educational opportunities before choosing a direction.")
+
+elif education_choice == "6":
+    print("That's okay.")
+    print("We'll work together to identify educational options that may fit your goals and interests.")
+
+elif choice == "7":
+    print("That's okay. Many people come to Career Compass because they're looking for clarity.")
+    print()
+    print("Which of these sounds most like what you're looking for?")
+    print()
+    print("1. A clearer sense of direction")
+    print("2. A career that's a better fit")
+    print("3. More opportunities to grow")
+    print("4. A better understanding of my strengths")
+    print("5. Possibilities I haven't considered")
+    print("6. I'm not sure")
+    
+    
     print("This section is still under construction.")
 
 print()
