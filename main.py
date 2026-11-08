@@ -242,6 +242,10 @@ elif choice == "6":
 
     education_choice = input("> ").strip()
 
+while education_choice not in ["1", "2", "3", "4", "5", "6"]:
+    print("Please enter a valid option (1-6).")
+    answer = input("> ").strip()
+
 if education_choice == "1":
     print("Short-term training can be a great way to develop valuable skills quickly.")
     print("Let's explore options that can help you reach your goals without a long-term commitment.")
