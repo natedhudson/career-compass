@@ -1,4 +1,13 @@
 import random
+user_profile = {
+    "Income": 0,
+    "Work_life_balance": 0,
+    "Purpose": 0,
+    "Job_security": 0,
+    "Growth": 0,
+    "Burnout": 0,
+}
+
 
 print("Welcome to Career Compass! Your next adventure starts here.")
 print()
@@ -26,12 +35,13 @@ if choice == "1":
     print()
     print("What is motivating you to explore a new career?")
     print()
-    print("1. Better income")
+    print("1. I know I'm capable of more and want to earn more")
     print("2. Better work-life balance")
-    print("3. More meaningful work")
+    print("3. My current work isn't meaningful to me")
     print("4. Greater job security")
-    print("5. A new challenge")
+    print("5. I've outgrown my current role and want a new challenge")
     print("6. Burnout in my current field")
+    print()
 
     answer = input("> ").strip()
 
@@ -41,42 +51,48 @@ if choice == "1":
 
     print()
 
-
-    print()
-
     if answer == "1":
-        print("Higher income is a common reason people explore new careers.")
-        print("Let's look at careers with strong earning potential.")
-        print("We'll also explore ways to increase your earning potential in your current field.")
+        print("""
+Income appears to be a key motivator for you right now.
+
+That helps us better understand what you're hoping to achieve in your career change.
+        """)
 
     elif answer == "2":
         print("Work-life balance can have a huge impact on quality of life.")
+        print()
         print("Let's explore careers known for flexibility.")
 
     elif answer == "3":
-        print("Many people want work that feels purposeful and rewarding.")
-        print("Let's explore careers that align with your values.")
+        print("Meanful work appears to be an important factor in your career search.")
+        print()
+        print("That's valuable to know as we continue exploring what a good career looks like for you.")
 
     elif answer == "4":
         print("Job security is important in an uncertain economy.")
+        print()
         print("Let's look at stable and growing industries.")
 
     elif answer == "5":
         print("A new challenge can be an exciting opportunity for growth.")
+        print()
         print("Let's explore careers that offer variety and advancement.")
 
     elif answer == "6":
         print("Burnout is a sign that something may need to change.")
+        print()
         print("Let's explore careers that may be a better long-term fit.")
 
 elif choice == "2":
     print("What would advancing your career look like for you?")
+    print()
     print("1. Earning more money")
     print("2. Getting promoted")
     print("3. Moving into leadership")
     print("4. Learning new skills")
     print("5. Changing departments")
     print("6. I'm not sure")
+    print()
 
     answer = input("> ").strip()
 
@@ -113,39 +129,43 @@ elif choice == "3":
     print("4. Knowing what jobs fit me")
     print("5. Staying motivated")
     print("6. I'm not sure")
-
+    print()
+    
     answer = input("> ").strip()
 
     while answer not in ["1", "2", "3", "4", "5", "6"]:
         print("Please enter a valid option (1-6).")
         answer = input("> ").strip()
-
-    print()
-    print("Thank you for sharing.")
     print()
 
     if answer == "1":
         print("Finding opportunities is often the first hurdle.")
+        print()
         print("Let's identify industries and roles that match your interests.")
 
     elif answer == "2":
         print("Getting interviews often comes down to resume quality and targeting.")
+        print()
         print("Let's explore ways to increase your response rate.")
 
     elif answer == "3":
         print("Many employers value skills and potential as much as experience.")
+        print()
         print("Let's look at ways to build credibility and confidence.")
 
     elif answer == "4":
         print("That's exactly what Career Compass is designed to help with.")
+        print()
         print("Let's continue exploring your strengths and interests.")
 
     elif answer == "5":
         print("Job searching can be exhausting.")
+        print()
         print("Let's break the process into manageable steps.")
 
     elif answer == "6":
         print("That's okay.")
+        print()
         print("We'll keep exploring until a clearer direction emerges.")
     
 elif choice == "4":
@@ -157,35 +177,43 @@ elif choice == "4":
     print("4. I'm changing careers")
     print("5. I have gaps in my work history")
     print("6. I'm not sure")
+    print()
 
     answer = input("> ").strip()
 
     while answer not in ["1", "2", "3", "4", "5", "6"]:
         print("Please enter a valid option (1-6).")
         answer = input("> ").strip()
+    print()
 
     if answer == "1":
         print("Many people underestimate how much value their existing experience provides.")
+        print()
         print("Let's identify skills and accomplishments you may be overlooking.")
 
     elif answer == "2":
         print("A strong resume is more than a list of jobs.")
+        print()
         print("Let's look at how your experience is being presented.")
 
     elif answer == "3":
         print("If applications aren't leading to interviews, there may be opportunities to improve targeting and presentation.")
+        print()
         print("Let's explore that further.")
 
     elif answer == "4":
         print("Career transitions can be challenging.")
+        print()
         print("Let's identify transferable skills that can help tell your story.")
 
     elif answer == "5":
         print("Employment gaps are more common than many people realize.")
+        print()
         print("Let's focus on presenting your experience with confidence.")
 
     elif answer == "6":
         print("That's okay.")
+        print()
         print("We'll work together to identify what may be holding your resume back.")
 
 elif choice == "5":
@@ -197,35 +225,43 @@ elif choice == "5":
     print("4. I'm not sure how to talk about my experience")
     print("5. I don't know what employers are looking for")
     print("6. I'm not sure")
+    print()
 
     answer = input("> ").strip()
 
     while answer not in ["1", "2", "3", "4", "5", "6"]:
         print("Please enter a valid option (1-6).")
         answer = input("> ").strip()
+    print()
 
     if answer == "1":
         print("Interview nerves are more common than you might think.")
+        print()
         print("Let's explore ways to help you feel more prepared and confident.")
 
     elif answer == "2":
         print("Difficult questions can feel intimidating.")
+        print()
         print("Let's look at strategies that can help you answer with confidence.")
 
     elif answer == "3":
         print("Many people find it uncomfortable to talk about themselves.")
+        print()
         print("Let's identify strengths and accomplishments that are worth highlighting.")
 
     elif answer == "4":
         print("You likely have more relevant experience than you realize.")
+        print()
         print("Let's explore ways to communicate your skills and accomplishments clearly.")
 
     elif answer == "5":
         print("Understanding what employers value can make interviews feel much less overwhelming.")
+        print()
         print("Let's take a closer look at what hiring managers are often looking for.")
 
     elif answer == "6":
         print("That's okay.")
+        print()
         print("We'll work together to identify areas where you can build confidence.")
 
 elif choice == "6":
@@ -237,35 +273,43 @@ elif choice == "6":
     print("4. professional development or continuing education")
     print("5. I'm exploring my options")
     print("6. I'm not sure")
-
+    print()
+    
     education_choice = input("> ").strip()
 
     while education_choice not in ["1", "2", "3", "4", "5", "6"]:
         print("Please enter a valid option (1-6).")
         education_choice = input("> ").strip()
+    print()
 
     if education_choice == "1":
         print("Short-term training can be a great way to develop valuable skills quickly.")
+        print()
         print("Let's explore options that can help you reach your goals without a long-term commitment.")
 
     elif education_choice == "2":
         print("Trade and technical careers often provide hands-on learning and strong job opportunities.")
+        print()
         print("Let's explore paths that match your interests and strengths.")
 
     elif education_choice == "3":
         print("A college degree can open doors to many career opportunities.")
+        print()
         print("Let's explore educational paths that align with your long-term goals.")
 
     elif education_choice == "4":
         print("Continuing education can help you stay competitive and grow professionally.")
+        print()
         print("Let's explore areas where you may want to develop new skills.")
 
     elif education_choice == "5":
         print("That's perfectly okay.")
+        print()
         print("Many people begin by exploring different educational opportunities before choosing a direction.")
 
     elif education_choice == "6":
         print("That's okay.")
+        print()
         print("We'll work together to identify educational options that may fit your goals and interests.")
 
 elif choice == "7":
@@ -279,6 +323,7 @@ elif choice == "7":
     print("4. A better understanding of my strengths")
     print("5. Possibilities I haven't considered")
     print("6. I'm not sure")
+    print()
 
     answer = input("> ").strip()
 
@@ -289,26 +334,32 @@ elif choice == "7":
 
     if answer == "1":
         print("Finding a clear direction is exactly what Career Compass was designed to help with.")
+        print()
         print("Let's explore your interests, strengths, and goals.")
-        
+    
     elif answer == "2":
         print("A better career fit can lead to greater satisfaction and long-term success.")
+        print()
         print("Let's identify the type of work that aligns with who you are.")
         
     elif answer == "3":
         print("Growth often begins with understanding where you want to go next.")
+        print()
         print("Let's explore opportunities that can help you move forward.")
         
     elif answer == "4":
         print("Your strengths can provide valuable clues about which careers may fit you best.")
+        print()
         print("Let's uncover some of those strengths together.")
         
     elif answer == "5":
         print("Some of the best career opportunities are the ones we haven't considered yet.")
+        print()
         print("Let's explore a few possibilities together.")
     
     elif answer == "6":
         print("That's completely okay.")
+        print()
         print("Many people start with uncertainty, and clarity develops one step at a time.")
 
 print()
