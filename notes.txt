@@ -19,3 +19,10 @@ print("4. Improve my resume")
 print("5. Prepare for interviews")
 print("6. Further my education")
 print("7. I'm not sure")
+
+TO DO:
+Move career assessment questions into Career Exploration flow.
+
+- How much additional education are you willing to pursue?
+- Which type of work sounds most appealing to you?
+- Imagine it's Monday morning and you're actually looking forward to work...
