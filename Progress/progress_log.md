@@ -28,3 +28,4 @@ Job Security
 Growth
 Burnout
 Created user_profile(traits)(scores )
+Orginized choices 1-3/questions,follow-up responses to correspond with user traits

@@ -13,13 +13,20 @@ print("Welcome to Career Compass! Your next adventure starts here.")
 print()
 print("Pick an area for us to look at together. You can always come back and explore other areas later.")
 print()
-print("1. See what careers might be a good fit for me")
-print("2. Take my career to the next level")
-print("3. Trying to find a job")
-print("4. Improve my resume")
-print("5. Prepare for interviews")
-print("6. Further my education")
-print("7. I'm not sure")
+
+options = [
+    "1. See what careers might be a good fit for me",
+    "2. Take my career to the next level",
+    "3. Trying to find a job",
+    "4. Improve my resume",
+    "5. Prepare for interviews",
+    "6. Further my education",
+    "7. I'm not sure"
+]
+
+for option in options:
+    print(option)
+
 print()
 
 choice = input("> ").strip()
@@ -31,7 +38,7 @@ while choice not in ["1", "2", "3", "4", "5", "6", "7"]:
 print()
 
 if choice == "1":
-    print("Now we're talking! Let's explore what careers might be a good fit for you.")
+    print("There are plenty of options out there! Let's explore what careers might be a good fit for you.")
     print()
     print("What is motivating you to explore a new career?")
     print()
@@ -86,7 +93,7 @@ elif answer == "5":
 
     print("A new challenge can be an exciting opportunity for growth.")
     print()
-    print("Let's explore careers that offer variety and advancement")
+    print("Let's explore careers that offer variety and advancement.")
 
 elif answer == "6":
     user_profile["Well-being"] += 5
@@ -96,14 +103,16 @@ elif answer == "6":
     print("Let's explore careers that may be a healthier long-term fit.") 
 
 elif choice == "2":
-    print("What would advancing your career look like for you?")
+    print("Now we're talking! Let's see what we can do to get you to the next level.")
     print()
-    print("1. Earning more money")
-    print("2. Getting promoted")
-    print("3. Moving into leadership")
-    print("4. Learning new skills")
-    print("5. Changing departments")
-    print("6. I'm not sure")
+    print("What would make you feel most successful one year from now?")
+    print()
+    print("1. Earning significantly more than I do today")
+    print("2. Having more time and energy outside of work")
+    print("3. Feeling that my work makes a meaningful difference")
+    print("4. Feeling secure in my job and career path")
+    print("5. Taking on new challenges and responsibilities")
+    print("6. Feeling healthier and less stressed overall")
     print()
 
     answer = input("> ").strip()
@@ -115,32 +124,58 @@ elif choice == "2":
     print()
 
     if answer == "1":
-        print("Increasing your income often begins with developing valuable skills.")
+        user_profile["Income"] += 5
+
+        print("Improving your financial situation appears to be an important part of your definition of success.")
+        print()
+        print("Let's explore opportunities that can help increase your earning potential.")
 
     elif answer == "2":
-        print("Promotions usually come from demonstrating impact and leadership.")
+        user_profile["Work_life_balance"] += 5
+
+        print("Having more time and energy outside of work can have a meaningful impact on overall quality of life.")
+        print()
+        print("Let's explore opportunities that may provide greater balance and flexibility.")
 
     elif answer == "3":
-        print("Leadership roles often require both technical and people skills.")
-
+        user_profile["Purpose"] += 5
+        
+        print("Making a meaningful contribution appeats to be an important to you.")
+        print()
+        print("Let's explore opportunities that align with the impact you'd like to have.")
+        
     elif answer == "4":
-        print("Learning new skills can create opportunities for advancement.")
+        user_profile["Job_security"] += 5
 
+        print("Feeling secure about your fuuture can provide confidence and peace of mind.")
+        print()
+        print("Let's explore opportunities that may provide greater stability and security.")
+    
     elif answer == "5":
-        print("Changing departments can help you find work that suits your strengths.")
+        user_profile["Growth"] += 5
 
+        print("Continued growth and new challenges can be energizing and rewarding.")
+        print()
+        print("Let's explore opportunities that may provide new challenges and responsibilities.")
+    
     elif answer == "6":
-        print("That's okay. Let's continue exploring your options.")
+        user_profile["Well-being"] += 5
+
+        print("Prioritizing your health and well-being is important for long-term success.")
+        print()
+        print("Let's explore opportunities that may provide a healthier work environment and reduce stress.")
 
 elif choice == "3":
-    print("What part of the job search is most challenging right now?")
+    print("Imagine you receive a job offer tomorrow.")
     print()
-    print("1. Finding positions to apply for")
-    print("2. Getting interviews")
-    print("3. Not having enough experience")
-    print("4. Knowing what jobs fit me")
-    print("5. Staying motivated")
-    print("6. I'm not sure")
+    print("What's the biggest reason you're smiling on the drive home?")
+    print()
+    print("1. The pay would open up new possibilities for me")
+    print("2. I'd finally have a better balance between work and peronal life")
+    print("3. The work feels like something I'd be proud to be part of")
+    print("4. It feels like a secure step forward for my future")
+    print("5. I'd have room to learn and grow and challenge myself")
+    print("6. I think I'd be happier there")
     print()
     
     answer = input("> ").strip()
@@ -151,34 +186,47 @@ elif choice == "3":
     print()
 
     if answer == "1":
-        print("Finding opportunities is often the first hurdle.")
+        user_profile["Income"] += 5
+
+        print("It's easy to understand why that would put a smile on your face.")
         print()
-        print("Let's identify industries and roles that match your interests.")
+        print("Let's look at opportunities that could make a meaningful difference in your finacial future.")
 
     elif answer == "2":
-        print("Getting interviews often comes down to resume quality and targeting.")
+        user_profile["Work_life_balance"] += 5
+
+        print("Work is important, but so is everthing waiting for you outside of it.")
         print()
-        print("Let's explore ways to increase your response rate.")
+        print("Let's get you in a job that gives you the best of both worlds.")
 
     elif answer == "3":
-        print("Many employers value skills and potential as much as experience.")
+        user_profile["Purpose"] += 5
+
+        print("It sounds like the work itself matters just as much as the paycheck.")
         print()
-        print("Let's look at ways to build credibility and confidence.")
+        print("Let's target that job that'll fulfill your sense of purpose.")
 
     elif answer == "4":
-        print("That's exactly what Career Compass is designed to help with.")
+        user_profile["Job_security"] += 5
+
+        print("It sounds like you're looking for something you can build on, not just something to get you by.")
         print()
-        print("Let's continue exploring your strengths and interests.")
+        print("Let's track down companies that offer the security your future can depend on.")
 
     elif answer == "5":
-        print("Job searching can be exhausting.")
+        user_profile["Growth"] += 5
+
+        print("New challenges often lead to new possibilities.")
         print()
-        print("Let's break the process into manageable steps.")
+        print("With energy like that, you have nowhere to go but up. Let's find a job that can help you grow and thrive.")
+
 
     elif answer == "6":
-        print("That's okay.")
+        user_profile["Well-being"] += 5
+
+        print("Feeling happier and less stressed is a goal worth taking seriously.")
         print()
-        print("We'll keep exploring until a clearer direction emerges.")
+        print("Let's venture down a path that results in a healthier future.")
     
 elif choice == "4":
     print("When it comes to your resume, what's the biggest challenge you're facing?")
