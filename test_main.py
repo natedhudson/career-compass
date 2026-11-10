@@ -5,7 +5,7 @@ user_profile = {
     "Purpose": 0,
     "Job_security": 0,
     "Growth": 0,
-    "Burnout": 0,
+    "Well-being": 0,
 }
 
 
@@ -40,48 +40,60 @@ if choice == "1":
     print("3. My current work isn't meaningful to me")
     print("4. Greater job security")
     print("5. I've outgrown my current role and want a new challenge")
-    print("6. Burnout in my current field")
+    print("6. My current work is negatively affecting my well-being")
     print()
 
+answer = input("> ").strip()
+
+while answer not in ["1", "2", "3", "4", "5", "6"]:
+    print("Please enter a valid option (1-6).")
     answer = input("> ").strip()
 
-    while answer not in ["1", "2", "3", "4", "5", "6"]:
-        print("Please enter a valid option (1-6).")
-        answer = input("> ").strip()
+print()
 
-    print()
+if answer == "1":
+    user_profile["Income"] += 5
 
-    if answer == "1":
-        print("""
+    print("""
 Income appears to be a key motivator for you right now.
 
 That helps us better understand what you're hoping to achieve in your career change.
-        """)
+    """)
 
-    elif answer == "2":
-        print("Work-life balance can have a huge impact on quality of life.")
-        print()
-        print("Let's explore careers known for flexibility.")
+elif answer == "2":
+    user_profile["Work_life_balance"] += 5
 
-    elif answer == "3":
-        print("Meanful work appears to be an important factor in your career search.")
-        print()
-        print("That's valuable to know as we continue exploring what a good career looks like for you.")
+    print("Work-life balance can have a huge impact on quality of life.")
+    print()
+    print("Let's explore careers known for flexibility.")
 
-    elif answer == "4":
-        print("Job security is important in an uncertain economy.")
-        print()
-        print("Let's look at stable and growing industries.")
+elif answer == "3":
+    user_profile["Purpose"] += 5
 
-    elif answer == "5":
-        print("A new challenge can be an exciting opportunity for growth.")
-        print()
-        print("Let's explore careers that offer variety and advancement.")
+    print("Meaningful work appears to be an important factor in your career search.")
+    print()
+    print("That's valuable to know as we continue exploring what a good career looks like for you.")
 
-    elif answer == "6":
-        print("Burnout is a sign that something may need to change.")
-        print()
-        print("Let's explore careers that may be a better long-term fit.")
+elif answer == "4":
+    user_profile["Job_security"] += 5
+
+    print("Job security is important in an uncertain economy.")
+    print()
+    print("Let's explore careers known for stability.")
+
+elif answer == "5":
+    user_profile["Growth"] += 5
+
+    print("A new challenge can be an exciting opportunity for growth.")
+    print()
+    print("Let's explore careers that offer variety and advancement")
+
+elif answer == "6":
+    user_profile["Well-being"] += 5
+
+    print("When work begins affecting your well-being, it may be a sign that something needs to change.")
+    print()
+    print("Let's explore careers that may be a healthier long-term fit.") 
 
 elif choice == "2":
     print("What would advancing your career look like for you?")
@@ -454,3 +466,14 @@ reason_list = list(dict.fromkeys(reason_list))
 
 print()
 print("Thanks. I'm starting to get a better sense of what you're looking for.")
+print()
+print()
+print()
+print("User Profile")
+print("------------")
+
+for trait, score in user_profile.items():
+    print(f"{trait}: {score}")
+    print()
+    print()
+

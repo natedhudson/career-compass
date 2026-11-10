@@ -27,3 +27,4 @@ Purpose
 Job Security
 Growth
 Burnout
+Created user_profile(traits)(scores )
