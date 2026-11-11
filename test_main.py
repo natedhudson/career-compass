@@ -204,7 +204,7 @@ elif choice == "3":
 
         print("It sounds like the work itself matters just as much as the paycheck.")
         print()
-        print("Let's target that job that'll fulfill your sense of purpose.")
+        print("Let's target the job that'll fulfill your sense of purpose.")
 
     elif answer == "4":
         user_profile["Job_security"] += 5
@@ -291,14 +291,14 @@ elif choice == "4":
         print("I'm glad you called that out!")
 
 elif choice == "5":
-    print("What concerns you most about interviewing?")
+    print("As you prepare for this interview, what outcome matters most to you?")
     print()
-    print("1. I get nervous during interviews")
-    print("2. I don't know how to answer difficult questions")
-    print("3. I struggle talking about myself")
-    print("4. I'm not sure how to talk about my experience")
-    print("5. I don't know what employers are looking for")
-    print("6. I'm not sure")
+    print("1. An opportunity that could improve my financial future")
+    print("2. A position that would better fit my life outside of work")
+    print("3. The chance to do work I can genuinely feel good about")
+    print("4. A position I can see myself in years from now")
+    print("5. An opportunity to continue learning and  growing")
+    print("6. A role that supports the life I want to build")
     print()
 
     answer = input("> ").strip()
@@ -309,13 +309,16 @@ elif choice == "5":
     print()
 
     if answer == "1":
-        
-        print("Interview nerves are more common than you might think.")
-        print()
-        print("Let's explore ways to help you feel more prepared and confident.")
+       user_profile["Income"] += 5
+
+       print("Financial growth appears to play a role in the direction of your career.")
+       print()
+       print("It's helpful to know that's an important goal for you.")
 
     elif answer == "2":
-        print("Difficult questions can feel intimidating.")
+        user_profile["Work_life_balance"] += 5
+
+        print(".")
         print()
         print("Let's look at strategies that can help you answer with confidence.")
 
