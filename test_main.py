@@ -11,6 +11,8 @@ user_profile = {
 
 print("Welcome to Career Compass! Your next adventure starts here.")
 print()
+print("So, what brings you here today?")
+print()
 print("Pick an area for us to look at together. You can always come back and explore other areas later.")
 print()
 
@@ -311,46 +313,54 @@ elif choice == "5":
     if answer == "1":
        user_profile["Income"] += 5
 
-       print("Financial growth appears to play a role in the direction of your career.")
+       print("A stronger financial future can create opportunities in many areas of life")
        print()
-       print("It's helpful to know that's an important goal for you.")
+       print("That's an important goal to keep in mind.")
 
     elif answer == "2":
         user_profile["Work_life_balance"] += 5
 
-        print(".")
+        print("The best opportunities don't just fit your career goals.")
         print()
-        print("Let's look at strategies that can help you answer with confidence.")
+        print("They fit your life as well.")
 
     elif answer == "3":
-        print("Many people find it uncomfortable to talk about themselves.")
+        user_profile["Purpose"] += 5
+
+        print("Doing work you genuinely believe in can make a big difference in day-to -day satisfaction.")
         print()
-        print("Let's identify strengths and accomplishments that are worth highlighting.")
+        print("That's worth paying attention to.")
 
     elif answer == "4":
-        print("You likely have more relevant experience than you realize.")
+        user_profile["Job_security"] += 5
+
+        print("It sounds like you're thinking about the long game, not just the next step.")
         print()
-        print("Let's explore ways to communicate your skills and accomplishments clearly.")
+        print("That's a valuable perspective to have.")
 
     elif answer == "5":
-        print("Understanding what employers value can make interviews feel much less overwhelming.")
+        user_profile["Growth"] += 5
+
+        print("You seem motivated by progress and the chance to keep moving forward.")
         print()
-        print("Let's take a closer look at what hiring managers are often looking for.")
+        print("That's a powerful mindset to bring into any opportunity.")
 
     elif answer == "6":
-        print("That's okay.")
+        user_profile["Well-being"] += 5
+
+        print("A career should support the life you're trying to build.")
         print()
-        print("We'll work together to identify areas where you can build confidence.")
+        print("I'm glad you called that out.")
 
 elif choice == "6":
-    print("What type of education are you interested in pursuing?")
+    print("As you think about furthering your education, what's the biggest reward you are looking for?")
     print()
-    print("1. Short-term courses or certifications")
-    print("2. Trade or technical school")
-    print("3. College degree (Associate, Bachelor's, or higher)")
-    print("4. professional development or continuing education")
-    print("5. I'm exploring my options")
-    print("6. I'm not sure")
+    print("1. New financial opportunities")
+    print("2. More freedom and flexibility")
+    print("3. Work that feels meaningful")
+    print("4. Greater stability and security")
+    print("5. Personal and personal growth")
+    print("6. A healthier and more fulfilling life")
     print()
     
     education_choice = input("> ").strip()
@@ -361,46 +371,58 @@ elif choice == "6":
     print()
 
     if education_choice == "1":
-        print("Short-term training can be a great way to develop valuable skills quickly.")
+        user_profile["Income"] += 5
+
+        print("Education is often an investment in future opportunities.")
         print()
-        print("Let's explore options that can help you reach your goals without a long-term commitment.")
+        print("It's helpful to know that financial growth is an important goal for you.")
 
     elif education_choice == "2":
-        print("Trade and technical careers often provide hands-on learning and strong job opportunities.")
+        user_profile["Work_life_balance"] += 5
+
+        print("Success isn't only measured by what you earn.")
         print()
-        print("Let's explore paths that match your interests and strengths.")
+        print("Having more freedom and flexibility can be just as valuable.")
 
     elif education_choice == "3":
-        print("A college degree can open doors to many career opportunities.")
+        user_profile["Purpose"] += 5
+
+        print("Feeling like work has purpose matters to a lot of people.")
         print()
-        print("Let's explore educational paths that align with your long-term goals.")
+        print("It sounds like it matters to you as well.")
 
     elif education_choice == "4":
-        print("Continuing education can help you stay competitive and grow professionally.")
+        user_profile["Job_security"] += 5
+
+        print("Many people pursue education because they're think about the future.")
         print()
-        print("Let's explore areas where you may want to develop new skills.")
+        print("Stability and security are powerful motivators.")
 
     elif education_choice == "5":
-        print("That's perfectly okay.")
+        user_profile["Growth"] += 5
+
+        print("You seem motivated be the opportunity to keep learning and developing.")
         print()
-        print("Many people begin by exploring different educational opportunities before choosing a direction.")
+        print("That's a valuable mindset to carry forward.")
 
     elif education_choice == "6":
-        print("That's okay.")
+        user_profile["Well-being"] += 5
+
+        print("A good career should support the life you're trying to build.")
         print()
-        print("We'll work together to identify educational options that may fit your goals and interests.")
+        print("That's worth keeping in mind.")
 
 elif choice == "7":
     print("That's okay. Many people come to Career Compass because they're looking for clarity.")
     print()
     print("Which of these sounds most like what you're looking for?")
     print()
-    print("1. A clearer sense of direction")
-    print("2. A career that's a better fit")
-    print("3. More opportunities to grow")
-    print("4. A better understanding of my strengths")
-    print("5. Possibilities I haven't considered")
-    print("6. I'm not sure")
+    print("1. A clearer picture of how to improve my financial future")
+    print("2. More balance between work and the rest of my life")
+    print("3. Work that feels purposeful and worthwhile")
+    print("4. More confidence about my future")
+    print("5. Opportunities to learn and grow")
+    print("6. A career that feels like a better fit overall")
     print()
 
     answer = input("> ").strip()
@@ -411,34 +433,46 @@ elif choice == "7":
     print()
 
     if answer == "1":
-        print("Finding a clear direction is exactly what Career Compass was designed to help with.")
+        user_profile["Income"] += 5
+
+        print("A stronger financial future can open the door to new possibilities.")
         print()
-        print("Let's explore your interests, strengths, and goals.")
+        print("It's helpful to know that's important to you.")
     
     elif answer == "2":
-        print("A better career fit can lead to greater satisfaction and long-term success.")
+        user_profile["Work_life_balance"] += 5
+
+        print("Finding balance can have a huge impact on overall quality of life.")
         print()
-        print("Let's identify the type of work that aligns with who you are.")
+        print("It's helpful to know that's what you're looking for.")
         
     elif answer == "3":
-        print("Growth often begins with understanding where you want to go next.")
+        user_profile["Purpose"] += 5
+
+        print("Meaningful work can make a big difference in long-term satisfaction.")
         print()
-        print("Let's explore opportunities that can help you move forward.")
+        print("That's a valuable thing to understand about yourself.")
         
     elif answer == "4":
-        print("Your strengths can provide valuable clues about which careers may fit you best.")
+        user_profile["Job_security"] += 5
+
+        print("Wanting more confidence about the future is completely understandable.")
         print()
-        print("Let's uncover some of those strengths together.")
+        print("We'll keep that in mind as we continue.")
         
     elif answer == "5":
-        print("Some of the best career opportunities are the ones we haven't considered yet.")
+        user_profile["Growth"] += 5
+
+        print("It sounds like you're motivated by learning and continuous improvement.")
         print()
-        print("Let's explore a few possibilities together.")
+        print("That's a valuable quality to build on.")
     
     elif answer == "6":
-        print("That's completely okay.")
+        user_profile["Well-being"] += 5
+
+        print("Finding a career that feels like a better fit can positively affect many areas of life.")
         print()
-        print("Many people start with uncertainty, and clarity develops one step at a time.")
+        print("Sounds like you have an understanding of what you need to be the best you!")
 
 print()
 print()

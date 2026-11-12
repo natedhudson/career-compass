@@ -1,6 +1,10 @@
-Career Compass Progress Log
-November 8, 2026
-Accomplishments
+Career Compass Progress Log- 
+
+
+November 08 2026
+
+Accomplishments:
+
 Fixed multiple indentation issues.
 Fixed accidental branch execution.
 Fixed education_choice NameError.
@@ -9,7 +13,9 @@ Added Option 7 structure.
 Began rewriting responses to feel more conversational.
 Learned how to use triple-quoted strings (""" """).
 Added user_profile dictionary foundation for future trait tracking.
-Lessons Learned
+
+Lessons Learned:
+
 Questions should collect information or be rewritten as statements.
 Triple quotes preserve formatting inside the string.
 Dictionaries can be used to store user traits and future scoring data.
@@ -26,7 +32,10 @@ Work-Life Balance
 Purpose
 Job Security
 Growth
-Burnout
+Well-being
+
+
+
 Created user_profile(traits)(scores )
 Organized choices 1-3/questions,follow-up responses to correspond with user traits
 Added 'Continue' and 'Code Spell Checker' to python extensions

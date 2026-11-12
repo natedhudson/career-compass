@@ -25,3 +25,19 @@ or
 
 Python
 print("Helping others seems especially important to you.")
+
+
+Career Compass should feel like a conversation, not a survey.
+Questions should be tied to the user's chosen path whenever possible.
+Answers should reveal motivations without making the scoring obvious.
+Each answer should map to one and only one user profile category.
+The six core motivators are:
+Income
+Work_life_balance
+Purpose
+Job_security
+Growth
+Well-being
+Users do not need to know the categories being measured.
+Different paths can measure the same motivator from different perspectives.
+Focus on discovering why the user wants something, not just what they want.
