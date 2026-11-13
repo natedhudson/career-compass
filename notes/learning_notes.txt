@@ -1,0 +1,9 @@
+options = [...]
+for option in options:
+    print(option)
+
+    cleaner way to print, aslo
+
+    ("""multiple lines of script""")
+
+    
