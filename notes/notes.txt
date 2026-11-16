@@ -321,6 +321,10 @@ If you'd like to read release notes for previous VS Code versions, go to Updates
 
 What you've uploaded is the November 11, 2026, release announcement for Visual Studio Code (VS Code), version 1.146.
 
+
+
+
+
 This is actually a pretty significant update, particularly if you're interested in having AI help you operate, troubleshoot, and eventually program your computer.
 
 Let me explain what it means in practical terms.
@@ -421,3 +425,210 @@ It would help you understand how the pieces fit together and what is actually po
 <row><button size="sm" onClick={() => GenUI.issueNewTurn("Create a detailed, easy-to-understand visual architecture diagram showing how ChatGPT, Visual Studio Code, GitHub Copilot, MCP, AI agents, and my Windows computer can work together. Show the connections, what each component does, how commands and permissions flow, and where human approval is needed. Make it beginner-friendly and technically accurate.")}>Create image</button></row>
 
 
+
+
+
+For your specific situation, I'd focus less on "what's new in VS Code 1.146" and more on what these changes enable you to do over the next year.
+The way I see it, there are five major concepts worth learning.
+1. AI Is Moving From Assistant to Agent
+A traditional AI assistant works like this:
+Plain Text
+You ask
+↓
+AI answers
+↓
+You do the work
+An AI agent works more like:
+Plain Text
+You define a goal
+↓
+AI investigates
+↓
+AI proposes changes
+↓
+You approve
+↓
+AI executes
+That's the biggest shift happening in VS Code.
+For example, instead of asking:
+"Why is my Python code crashing?"
+you might eventually say:
+"Find the bug, test three possible fixes, compare the results, and show me the best solution."
+The agent does the investigation.
+You become the decision-maker rather than the person doing every step manually.
+2. VS Code Is Becoming an AI Operating Center
+A lot of people still think VS Code is just a code editor.
+That used to be true.
+Now it's becoming something closer to:
+Plain Text
+Workspace
++
+AI Assistant
++
+AI Agents
++
+Terminal
++
+Models
++
+Extensions
+all in one place.
+If you're building something like Career Compass, imagine:
+Agent 1
+Reviews your Python code.
+Agent 2
+Checks for logic errors.
+Agent 3
+Looks for opportunities to simplify branching.
+Agent 4
+Tests user scenarios.
+Then Inbox Mode shows you:
+Plain Text
+Needs attention
+Working
+Ready to merge
+Done
+That's much closer to managing workers than using a chatbot.
+3. Model Comparison Is Extremely Valuable
+This feature might be underrated.
+Suppose you're building Career Compass.
+You could ask multiple models:
+"Design a follow-up question for users motivated by Growth."
+Perhaps:
+Model A
+Gives creative questions.
+Model B
+Gives psychologically accurate questions.
+Fusion
+Combines strengths.
+The comparison tooling lets you evaluate all of them side-by-side.
+For somebody building assessments or educational tools, this can become incredibly useful.
+4. MCP May Become One of the Most Important Skills To Learn
+You mentioned AI operating your computer.
+This is where MCP starts to matter.
+MCP (Model Context Protocol) is essentially a standardized way for AI systems to use tools.
+Think:
+Plain Text
+AI
+↓
+MCP
+↓
+Tool
+Examples:
+Plain Text
+AI
+↓
+File System
+↓
+Reads a file
+Plain Text
+AI
+↓
+GitHub
+↓
+Creates an issue
+Plain Text
+AI
+↓
+Database
+↓
+Queries records
+Plain Text
+AI
+↓
+Browser
+↓
+Collects information
+The important thing is that MCP is becoming an ecosystem rather than a single feature.
+Learning MCP today is similar to learning web browsers in the early internet era.
+You don't need to know everything.
+You just need to understand:
+servers
+tools
+permissions
+context
+5. Security and Permissions Matter More Than Ever
+The smarter the agents get, the more important permissions become.
+A healthy mindset is:
+Plain Text
+Never give an AI more access than needed.
+For example:
+Good:
+Plain Text
+Read this folder.
+Better:
+Plain Text
+Read only this project folder.
+Not ideal:
+Plain Text
+Read my entire computer.
+The VS Code team appears to be moving heavily toward granular permissions, which is exactly the right direction.
+What You Can Do With This Today
+If I were guiding you personally, I'd suggest this progression:
+Stage 1: Build Career Compass
+Continue learning:
+Python
+VS Code
+GitHub
+Basic AI prompting
+Goal:
+Plain Text
+Build software with AI assistance.
+Stage 2: Learn Copilot Agent Workflows
+Practice:
+letting agents refactor code
+generating tests
+reviewing changes
+explaining bugs
+Goal:
+Plain Text
+Manage AI workers.
+instead of merely chatting with them.
+Stage 3: Learn MCP
+Build simple connections:
+Plain Text
+AI
+→ Local files
+Plain Text
+AI
+→ GitHub
+Plain Text
+AI
+→ Database
+Goal:
+Plain Text
+Give AI useful tools safely.
+Stage 4: Build Complete Systems
+This is where Career Compass gets interesting.
+Imagine:
+Plain Text
+Career Compass
+↓
+Assessment
+↓
+Profile
+↓
+AI Analysis
+↓
+Recommendations
+↓
+Resume Guidance
+↓
+Interview Coaching
+with AI helping generate personalized responses from the information users provide.
+What I'd Teach You First
+If your goal is eventually using AI to build, troubleshoot, automate, and improve software, I'd focus on understanding this simple architecture:
+Plain Text
+You
+↓
+VS Code
+↓
+Copilot Agent
+↓
+Tools (MCP)
+↓
+Files / GitHub / Databases
+↓
+Results
+Once that diagram makes intuitive sense, almost everything in the VS Code release notes starts fitting together.
+The exciting thing is that you're already building something real with Career Compass. That gives you a practical reason to learn these tools instead of studying them in isolation. You're not learning AI, Python, VS Code, and agents separately anymore. You're learning how they work together to help you build an actual product. That's where the biggest progress usually happens.

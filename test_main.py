@@ -8,6 +8,8 @@ user_profile = {
     "Well-being": 0,
 }
 
+user_needs = {}
+
 
 print("Welcome to Career Compass! Your next adventure starts here.")
 print()
@@ -64,17 +66,105 @@ if answer == "1":
     user_profile["Income"] += 5
 
     print("""
+
 Income appears to be a key motivator for you right now.
 
 That helps us better understand what you're hoping to achieve in your career change.
+
+What's the biggest thing standing between you and earning more today?
+
+1. I don't know what careers pay more
+2. I don't have the right skills
+3. I don't know what opportunities are available
+4. I feel stuck in my current path
+5. I don't know where to start
+6. I haven't figured that out yet
+
+""")
+
+    need = input("> ").strip()
+
+    while need not in ["1", "2", "3", "4", "5", "6"]:
+        print("Please enter a valid option (1-6).")
+        need = input("> ").strip()
+
+    print()
+
+    if need == "1":
+        user_needs["Income"] = "career_information"
+
+        print("""
+
+That's completely understandable.
+
+Many people know they want to earn more but aren't sure which careers offer strong earning potential.
+
+""")
+        
+    elif need == "2":
+        user_needs["Income"] = "skills_gap"
+
+        print("""
+
+That's a common concern when considering a career change.
+    
+Many higher-paying opportunities become more accessible as people build new skills and experience.
+    
     """)
 
+    elif need == "3":
+        user_needs["Income"] = "opportunity_awareness"
+
+        print("""
+
+That's completely understandable.
+                    
+There may be more opportunities available than you realize.
+    
+Sometimes the challenge isn't a lack of options, but knowing where to look.
+    
+    """)
+
+    elif need == "4":
+        user_needs["Income"] = "career_stagnation"
+
+        print("""
+        
+Feeling stuck can make it difficult to see what comes next.
+    
+The good news is that many skills and experiences can transfer into new career paths.
+    
+    """)
+
+    elif need == "5":
+        user_needs["Income"] = "starting_point"
+
+        print("""
+        
+Starting can often be the hardest part.
+    
+Breaking a large goal into smaller steps can make the path forward much clearer.
+
+""")
+
+    elif need == "6":
+        user_needs["Income"] = "unclear"
+
+        print("""
+        
+That's completely okay.
+
+Many people know they want something different before they've figured out exactly what's standing in their way.
+
+""")
+        
 elif answer == "2":
     user_profile["Work_life_balance"] += 5
 
     print("Work-life balance can have a huge impact on quality of life.")
     print()
     print("Let's explore careers known for flexibility.")
+    user_profile["Work_life_balance"] += 5
 
 elif answer == "3":
     user_profile["Purpose"] += 5
@@ -102,7 +192,7 @@ elif answer == "6":
 
     print("When work begins affecting your well-being, it may be a sign that something needs to change.")
     print()
-    print("Let's explore careers that may be a healthier long-term fit.") 
+    print("Let's explore careers that may be a healthier long-term fit.")
 
 elif choice == "2":
     print("Now we're talking! Let's see what we can do to get you to the next level.")
