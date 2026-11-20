@@ -40,3 +40,9 @@ Created user_profile(traits)(scores )
 Organized choices 1-3/questions,follow-up responses to correspond with user traits
 Added 'Continue' and 'Code Spell Checker' to python extensions
 Downloaded AnythingLLM Desktop app
+
+Installed Linux Mint- cinnamon
+installed VS and GitHub plus extensions in VS
+Took notes on linux, git and VS codes
+Got familiar with SQLite3
+
