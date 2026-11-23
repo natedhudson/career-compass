@@ -164,6 +164,7 @@ elif answer == "2":
     print("Work-life balance can have a huge impact on quality of life.")
     print()
     print("Let's explore careers known for flexibility.")
+    
 
 elif answer == "3":
     user_profile["Purpose"] += 5
