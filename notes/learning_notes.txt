@@ -7,3 +7,25 @@ for option in options:
     ("""multiple lines of script""")
 
     
+
+
+Replace this:
+
+    answer = input("> ").strip()
+
+while answer not in ["1", "2", "3"]:
+    print("Please enter a valid option.")
+    answer = input("> ").strip()
+
+With this:
+
+    def get_valid_input(valid_options, error_message):
+    answer = input("> ").strip()
+
+    while answer not in valid_options:
+        print(error_message)
+        answer = input("> ").strip()
+
+    return answer
+
+    

@@ -1,4 +1,14 @@
 import random
+
+def get_valid_input(valid_options, error_message):
+    answer = input("> ").strip()
+
+    while answer not in valid_options:
+        print(error_message)
+        answer = input("> ").strip()
+
+    return answer
+
 user_profile = {
     "Income": 0,
     "Work_life_balance": 0,
@@ -33,16 +43,17 @@ for option in options:
 
 print()
 
-choice = input("> ").strip()
-
-while choice not in ["1", "2", "3", "4", "5", "6", "7"]:
-    print("Please enter a valid option (1-7).")
-    choice = input("> ").strip()
+choice = get_valid_input(
+    ["1", "2", "3", "4", "5", "6", "7"],
+    "Please enter a valid option (1-7)."
+)
 
 print()
 
 if choice == "1":
-    print("There are plenty of options out there! Let's explore what careers might be a good fit for you.")
+    print("There are plenty of options out there!")
+    print()
+    print("Let's explore what careers might be a good fit for you.")
     print()
     print("What is motivating you to explore a new career?")
     print()
@@ -54,11 +65,10 @@ if choice == "1":
     print("6. My current work is negatively affecting my well-being")
     print()
 
-answer = input("> ").strip()
-
-while answer not in ["1", "2", "3", "4", "5", "6"]:
-    print("Please enter a valid option (1-6).")
-    answer = input("> ").strip()
+    answer = get_valid_input(
+        ["1", "2", "3", "4", "5", "6"],
+        "Please enter a valid option (1-6)."
+)
 
 print()
 
@@ -71,6 +81,8 @@ Income appears to be a key motivator for you right now.
 
 That helps us better understand what you're hoping to achieve in your career change.
 
+Now let's look at what's making that goal harder to reach.
+
 What's the biggest thing standing between you and earning more today?
 
 1. I don't know what careers pay more
@@ -82,11 +94,10 @@ What's the biggest thing standing between you and earning more today?
 
 """)
 
-    need = input("> ").strip()
-
-    while need not in ["1", "2", "3", "4", "5", "6"]:
-        print("Please enter a valid option (1-6).")
-        need = input("> ").strip()
+    need = get_valid_input(
+    ["1", "2", "3", "4", "5", "6"],
+    "Please enter a valid option (1-6)."
+)
 
     print()
 
@@ -161,10 +172,95 @@ Many people know they want something different before they've figured out exactl
 elif answer == "2":
     user_profile["Work_life_balance"] += 5
 
-    print("Work-life balance can have a huge impact on quality of life.")
+    print("Work-life balance appears to be a key motivator for you right now.")
     print()
-    print("Let's explore careers known for flexibility.")
+    print("That helps us better understand what you're hoping to improve in you career.")
+    print()
+    print("Now let's look at what would improve your work-life balance the most.")
+    print("""
     
+1. More time for family and friends
+2. More time to rest and recharge
+3. Less stress outside of work
+4. More flexibility in my schedule
+5. Better alignment between work and personal life
+6. I'm not sure
+
+""")
+    need = get_valid_input(
+        ["1", "2", "3", "4", "5", "6"],
+        "Please enter a valid option (1-6)."
+    )
+
+    print()
+
+    if need == "1":
+        user_needs["Work_life_balance"] = "family_time"
+
+        print("""
+
+Many people start exploring career changes when work leaves too little time for the people who matter most.
+
+Finding a better balance between work and personal relationships can have a meaningful impact on overall well-being.
+        
+        """)
+    
+    elif need == "2":
+        user_needs["Work_life_balance"] = "recovery_time"
+
+        print("""
+        
+Making time for rest isn't a luxury. It's an important part of maintaining health, energy, and overall satisfaction.
+        
+When work leaves too little room to recharge, the effects can add up over time.
+        
+        """)
+    
+    elif need == "3":
+        user_needs["Work_life_balance"] = "less_stress"
+
+        print("""
+        
+Stress has a way of affecting more that just the workday.
+
+When work-related stress begins carrying over into the rest of life, it's understandable to start looking for a healthier balance.
+
+""")
+    
+    elif need == "4":
+        user_needs["Work_life_balance"] = "schedule_flexibility"
+
+        print("""
+        
+Flexibility can make a meaningful difference in overall quality of life.
+
+Many people begin exploring new opportunities when their current schedule no longer fits their needs.
+
+""")
+
+    elif need == "5":
+        user_needs["Work_life_balance"] = "work_life_alignment"
+
+        print("""
+        
+As priorities change, it's natural for what people want from their careers to change as well.
+
+Many people begin exploring new opportunities when their work no longer fits the life they want outside of it.
+
+""")
+    
+    elif need == "6":
+        user_needs["Work_life_balance"] = "unclear"
+
+        print("""
+        
+That's completely okay.
+
+When different parts of life and work overlap it isn't always easy to identify what's affecting your balance the most.
+
+""")
+
+
 
 elif answer == "3":
     user_profile["Purpose"] += 5
@@ -172,6 +268,9 @@ elif answer == "3":
     print("Meaningful work appears to be an important factor in your career search.")
     print()
     print("That's valuable to know as we continue exploring what a good career looks like for you.")
+    print()
+
+
 
 elif answer == "4":
     user_profile["Job_security"] += 5
