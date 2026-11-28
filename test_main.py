@@ -172,7 +172,7 @@ Many people know they want something different before they've figured out exactl
 elif answer == "2":
     user_profile["Work_life_balance"] += 5
 
-    print("Work-life balance appears to be a key motivator for you right now.")
+    print("A fuller balance between work and the rest of life appears to be a key motivator for you right now.")
     print()
     print("That helps us better understand what you're hoping to improve in you career.")
     print()
@@ -187,6 +187,7 @@ elif answer == "2":
 6. I'm not sure
 
 """)
+    
     need = get_valid_input(
         ["1", "2", "3", "4", "5", "6"],
         "Please enter a valid option (1-6)."
@@ -260,15 +261,96 @@ When different parts of life and work overlap it isn't always easy to identify w
 
 """)
 
-
-
 elif answer == "3":
     user_profile["Purpose"] += 5
 
-    print("Meaningful work appears to be an important factor in your career search.")
+    print("Finding work that feels meaningful appears to be a key motivator for you right now.")
     print()
-    print("That's valuable to know as we continue exploring what a good career looks like for you.")
+    print("That helps us better understand what you're hoping to find in your career.")
     print()
+    print("Now let's look at what would make your work feel more meaningful.")
+    print("""
+    
+1. Helping people more directly
+2. Feeling that my work makes a positive difference
+3. Working toward something I believe in
+4. Using more of my strengths and talents
+5. Feeling more connected to my work
+6. I'm not sure
+    
+    """)
+
+    need = get_valid_input(
+            ["1", "2", "3", "4", "5", "6"],
+            "Please enter a valid option (1-6)."
+        )
+    
+    print()
+
+    if need == "1":
+        user_needs["Purpose"] = "direct_impact"
+
+        print("""
+        
+For many people, meaningful work begins with knowing that their efforts are helping someone in a tangible way.
+
+It's understandable that having a more direct impact would be important to you.
+
+""")
+
+    elif need == "2":
+        user_needs["Purpose"] = "positive_difference"
+
+        print("""
+Many people find greater satisfaction in their work when they believe their efforts contribute to something worthwhile.
+
+Knowing that your work has a positive impact can make even difficult work feel more meaningful.
+
+""")
+
+    elif need == "3":
+        user_needs["Purpose"] = "values_alignment"
+
+        print("""
+
+Work often feels more meaningful when it reflects the values and beliefs that matter most to us.
+
+It's understandable to look for opportunities that feel more aligned with what you believe in.
+
+""")
+
+    elif need == "4":
+        user_needs["Purpose"] = "strength_utilization"
+
+        print("""
+        
+Having untapped strengths or talents can leave work feeling less fulfilling than it could be.
+
+Many people begin exploring nre opportunities what they feel they have more to contribute.
+
+""")
+
+    elif need == "5":
+        user_needs["Purpose"] = "work_connection"
+
+        print("""
+        
+Feeling disconnected from your work can make even important tasks seem less meaningful.
+
+Building a stronger connection to the work itself is often an important part of finding greater purpose.
+
+""")
+
+    elif need == "6":
+        user_needs["Purpose"] = "unclear"
+
+        print("""
+        
+That's completely okay.
+
+Sometimes it's easier to recognize the desire for more meaningful work that it is to explain exactly why.
+
+""")
 
 
 
